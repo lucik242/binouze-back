@@ -1,0 +1,22 @@
+const express = require('express');
+
+const bodyParser = require('body-parser');
+const cors = require("cors");
+const PORT = 8080;
+const app = express()
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(cors())
+
+
+ const apiPhone = require('./routes/phone')
+
+
+ app.use('/phone', apiPhone);
+
+
+
+app.listen(PORT, () => {
+        console.log('server is running in the PORT: ' + PORT)
+})
