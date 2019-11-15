@@ -7,7 +7,7 @@ const phoneSchema = new Schema({
         type: String,
         price: Number,
         rating: Number,
-        warranty: Number,
+        warranty_years: Number,
        available : Boolean
 })
 

@@ -21,7 +21,7 @@ router.post('/addPhone', (req, res) => {
           phone.type = req.body.type;
           phone.price = req.body.price;
           phone.rating = req.body.rating;
-          phone.warranty = req.body.warranty;
+          phone.warranty_years = req.body.warranty_years;
            phone.available =  req.body.available;
          
           phone.save((error, addPhone) => {
@@ -73,7 +73,7 @@ router.put('/modifPhone/:id',(req, res) =>{
           phone.type = req.body.type;
           phone.price = req.body.price;
           phone.rating = req.body.rating;
-          phone.warranty= req.body.warranty;
+          phone.warranty_years= req.body.warranty_years;
           phone.available =  req.body.available;
         console.log(phone);
         
