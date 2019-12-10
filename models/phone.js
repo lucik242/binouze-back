@@ -7,9 +7,9 @@ const phoneSchema = new Schema({
 	type: String,
 	price: String,
 	rating: String,
-	warranty_years: String,
+	description: String,
 	file: String,
-	available: Boolean
+ available: Boolean
 });
 
 module.exports = mongoose.model("phone", phoneSchema);

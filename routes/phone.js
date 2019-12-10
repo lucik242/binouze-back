@@ -27,6 +27,7 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage });
 
+
 // Add phone START ************
 router.post("/addPhone", upload.single("file"), (req, res, next) => {
 	// console.log("req.body: ", req.body);
@@ -38,7 +39,7 @@ router.post("/addPhone", upload.single("file"), (req, res, next) => {
 	phone.type = req.body.type;
 	phone.price = req.body.price;
 	phone.rating = req.body.rating;
-	phone.warranty_years = req.body.warranty_years;
+	phone.description = req.body.description;
 	phone.available = req.body.available;
 
 	phone.file = req.file.path;
@@ -81,7 +82,7 @@ router.put("/modifPhone/", (req, res) => {
 			phone.type = req.body.type;
 			phone.price = req.body.price;
 			phone.rating = req.body.rating;
-			phone.warranty_years = req.body.warranty_years;
+			phone.description = req.body.description;
 			phone.available = req.body.available;
 			console.log(phone);
 
