@@ -31,7 +31,7 @@ var upload = multer({ storage: storage });
 // Add phone START ************
 router.post("/addPhone", upload.single("file"), (req, res, next) => {
 	// console.log("req.body: ", req.body);
-	console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+	console.log("req.body: ", req.body);
 	console.log("req.file: ", req.file);
 
 	let phone = new Phone();
@@ -41,7 +41,6 @@ router.post("/addPhone", upload.single("file"), (req, res, next) => {
 	phone.rating = req.body.rating;
 	phone.description = req.body.description;
 	phone.available = req.body.available;
-
 	phone.file = req.file.path;
 
 	phone.save((error, addPhone) => {
