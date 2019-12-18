@@ -7,7 +7,10 @@ const fs = require("fs");
 //for connect db
 const mongoose = require("mongoose");
 let db = "mongodb://localhost:27017/produits_db";
-mongoose.connect(db, { useNewUrlParser: true }, err => {
+mongoose.connect(db, { 
+	useNewUrlParser: true, 
+ useCreateIndex: true
+}, err => {
 	if (err) {
 		console.log("Error!! " + err);
 	} else {
