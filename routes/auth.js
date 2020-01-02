@@ -38,13 +38,12 @@ router.post('/', (req, res) => {
   .then(user => {
    //if no user
    if (!user) return res.status(400).json({ msg: 'User Does not exist' });
-
+   
    //Validate password
    bcrypt.compare(password, user.password)
       .then(isMatch => {
        // if it is not match
        if (!isMatch) return res.status(400).json({ msg:'Invalid credentials' });
-
        jwt.sign(
         { id: user.id },
         config.get('jwtSecret'),
