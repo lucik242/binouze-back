@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const phoneSchema = new Schema({
+const articleSchema = new Schema({
 	name: String,
 	type: String,
 	price: String,
@@ -12,4 +12,4 @@ const phoneSchema = new Schema({
  available: Boolean
 });
 
-module.exports = mongoose.model("phone", phoneSchema);
+module.exports = mongoose.model("article", articleSchema);

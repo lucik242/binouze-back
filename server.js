@@ -11,11 +11,11 @@ app.use(express.json());
 app.use(cors());
 app.use("/uploads", express.static("uploads"));
 
-const apiPhone = require("./routes/phone");
+const apiArticle = require("./routes/article");
 const apiUsers = require("./routes/users");
 const apiAuth = require("./routes/auth");
 
-app.use("/phone", apiPhone);
+app.use("/article", apiArticle);
 app.use("/users", apiUsers);
 app.use("/auth", apiAuth);
 
