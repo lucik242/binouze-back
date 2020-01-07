@@ -25,7 +25,7 @@ mongoose.connect(db, {
 
 //route  POST /auth
 // desc Auth user
-router.post('/', (req, res) => {
+router.post('/auth', (req, res) => {
  const { email, password } = req.body;
 
  //validation

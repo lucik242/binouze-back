@@ -23,7 +23,7 @@ mongoose.connect(db, {
 
 //route  POST /users
 // desc Register new user
-router.post('/', (req, res) =>{
+router.post('/users', (req, res) =>{
  const {name, email, password } = req.body;
 
  //validation
