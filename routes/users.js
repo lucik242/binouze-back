@@ -8,8 +8,6 @@ const jwt = require('jsonwebtoken');
 
 //for connect db
  const mongoose = require("mongoose");
-// const mongoose = config.get('mongoURI');
-// let db = "mongodb://localhost:27017/produits_db";
 let db = config.get('mongoURI');
 mongoose.connect(db, {
  useNewUrlParser: true,

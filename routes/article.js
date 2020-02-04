@@ -2,11 +2,13 @@ const express = require("express");
 const router = express.Router();
 const Article = require("../models/article");
 const multer = require("multer");
+const config = require('config');
 const fs = require("fs");
 
 //for connect db
 const mongoose = require("mongoose");
-let db = "mongodb://localhost:27017/produits_db";
+// let db = "mongodb://localhost:27017/produits_db";
+let db = config.get('mongoURI');
 mongoose.connect(db, { 
 	useNewUrlParser: true, 
  useCreateIndex: true
